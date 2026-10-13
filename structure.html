@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1118">
+  <meta name="description" content="Основные автомобильные системы: двигатель, трансмиссия, подвеска, тормоза и другие.">
+  <title>Устройство автомобиля — AutoLab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- МЕСТО ДЛЯ СЧЁТЧИКОВ: устанавливаются только после регистрации на сервисах.
+       Не подставляйте чужие ID. Код LiveInternet / Rambler / MyTracker добавим позднее. -->
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="structure">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header"><div class="shell header-inner">
+  <a class="logo" href="index.html" aria-label="AutoLab — на главную">Auto<span>Lab</span><i></i></a>
+  <nav class="nav" id="site-nav" aria-label="Основное меню"><a href="index.html" class="nav-link " >Главная</a><a href="structure.html" class="nav-link active" aria-current="page">Устройство</a><a href="service.html" class="nav-link " >Обслуживание</a><a href="glossary.html" class="nav-link " >Автословарь</a><a href="quiz.html" class="nav-link " >Тест знаний</a><a href="about.html" class="nav-link " >О проекте</a></nav>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="page-banner shell"><div class="eyebrow">АВТОМОБИЛЬ ИЗНУТРИ</div><h1>Устройство <em>автомобиля</em></h1><p>Выбирай систему, чтобы узнать, какую задачу она выполняет и из чего состоит.</p></section>
+<section class="shell section structure-layout">
+  <div class="system-list" role="tablist" aria-label="Системы автомобиля">
+    <button role="tab" class="system-tab selected" aria-controls="system-panel" aria-selected="true" data-system="engine">⚙ <span>Двигатель</span></button>
+    <button role="tab" class="system-tab" aria-controls="system-panel" aria-selected="false" data-system="gearbox">⇄ <span>Трансмиссия</span></button>
+    <button role="tab" class="system-tab" aria-controls="system-panel" aria-selected="false" data-system="suspension">⌁ <span>Подвеска</span></button>
+    <button role="tab" class="system-tab" aria-controls="system-panel" aria-selected="false" data-system="brakes">◎ <span>Тормозная система</span></button>
+    <button role="tab" class="system-tab" aria-controls="system-panel" aria-selected="false" data-system="electric">ϟ <span>Электрооборудование</span></button>
+    <button role="tab" class="system-tab" aria-controls="system-panel" aria-selected="false" data-system="body">▣ <span>Кузов</span></button>
+    <button role="tab" class="system-tab" aria-controls="system-panel" aria-selected="false" data-system="safety">◈ <span>Системы безопасности</span></button>
+  </div>
+  <div id="system-panel" class="system-content" role="tabpanel" tabindex="0" aria-live="polite">
+    <div class="system-image"><img id="system-image" src="assets/engine.jpg" alt="Иллюстрация двигателя автомобиля"></div>
+    <article class="system-description"><div class="kicker">КАК ЭТО РАБОТАЕТ</div><h2 id="system-title">Двигатель</h2><p id="system-text">Двигатель превращает энергию топлива в механическую работу и приводит автомобиль в движение.</p><h3>Основные элементы</h3><ul id="system-parts" class="part-list"><li>Блок цилиндров</li><li>Поршни</li><li>Коленчатый вал</li><li>Клапанный механизм</li></ul><a class="btn btn-primary btn-small" href="glossary.html" data-track="open_glossary" data-location="structure">Изучить термины →</a></article>
+  </div>
+</section>
+<section class="shell section"><div class="section-top"><div><div class="kicker">ЗАПОМНИ</div><h2>Типы силовых установок</h2></div></div>
+<div class="compact-grid"><article class="mini-card"><span>01</span><h3>Бензиновый двигатель</h3><p>Использует бензин и искровое зажигание топливовоздушной смеси.</p></article><article class="mini-card"><span>02</span><h3>Дизельный двигатель</h3><p>Топливо воспламеняется от высокой температуры сжатого воздуха.</p></article><article class="mini-card"><span>03</span><h3>Гибрид</h3><p>Объединяет двигатель внутреннего сгорания и электромотор.</p></article><article class="mini-card"><span>04</span><h3>Электромобиль</h3><p>Передвигается за счёт энергии аккумулятора и электродвигателя.</p></article></div></section>
+</main>
+<footer class="site-footer"><div class="shell footer-columns">
+  <div><a class="logo" href="index.html">Auto<span>Lab</span><i></i></a><p>Понятно о сложном. Узнавай, как устроен автомобиль, и проверяй свои знания.</p></div>
+  <div><div class="footer-title">Разделы</div><div class="footer-links"><a href="structure.html">Устройство</a><a href="service.html">Обслуживание</a><a href="glossary.html">Автословарь</a><a href="quiz.html">Тест знаний</a></div></div>
+  <div><div class="footer-title">О проекте</div><p>Образовательный веб-проект, созданный для практических заданий по веб-аналитике.</p><a class="footer-cta" href="about.html">Подробнее о сайте →</a></div>
+</div><div class="shell copyright"><span>© 2026 AutoLab · Учебный проект</span><span>Сделано для любознательных водителей</span></div>
+<!-- СЧЁТЧИКИ С ВИДЖЕТОМ: здесь появятся блоки LiveInternet и других систем, если они предусмотрены методичками. -->
+</footer>
+</body></html>

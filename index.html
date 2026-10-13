@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1118">
+  <meta name="description" content="AutoLab — устройство и обслуживание автомобилей простыми словами.">
+  <title>Главная — AutoLab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- МЕСТО ДЛЯ СЧЁТЧИКОВ: устанавливаются только после регистрации на сервисах.
+       Не подставляйте чужие ID. Код LiveInternet / Rambler / MyTracker добавим позднее. -->
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header"><div class="shell header-inner">
+  <a class="logo" href="index.html" aria-label="AutoLab — на главную">Auto<span>Lab</span><i></i></a>
+  <nav class="nav" id="site-nav" aria-label="Основное меню"><a href="index.html" class="nav-link active" aria-current="page">Главная</a><a href="structure.html" class="nav-link " >Устройство</a><a href="service.html" class="nav-link " >Обслуживание</a><a href="glossary.html" class="nav-link " >Автословарь</a><a href="quiz.html" class="nav-link " >Тест знаний</a><a href="about.html" class="nav-link " >О проекте</a></nav>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="hero"><div class="hero-art" aria-hidden="true"></div><div class="shell hero-content">
+  <div class="eyebrow"><span class="signal"></span> ЗНАНИЯ · УХОД · БЕЗОПАСНОСТЬ</div>
+  <h1>Всё об автомобиле<br><em>в одном месте</em></h1>
+  <p class="lead">Разберись, как устроена машина, научись ухаживать за ней и проверь себя. Без сложных объяснений и лишних слов.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="structure.html" data-track="open_structure" data-location="hero">Начать изучение <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="quiz.html" data-track="open_quiz" data-location="hero">Пройти тест</a></div>
+  <div class="hero-note"><span class="dot"></span> Шесть разделов. Один понятный маршрут.</div>
+</div></section>
+<section class="section shell section-overlap" aria-labelledby="sections-title">
+  <div class="section-top"><div><div class="kicker">ИССЛЕДУЙ</div><h2 id="sections-title">Выбери, с чего начать</h2></div><p class="section-help">От первых терминов до уверенных знаний — выбирай направление.</p></div>
+  <div class="feature-grid">
+    <a href="structure.html" class="feature-card" data-track="open_structure" data-location="features"><span class="feature-icon">⚙</span><span class="feature-label">01 / ОСНОВЫ</span><h3>Устройство</h3><p>Двигатель, трансмиссия, подвеска и другие системы автомобиля.</p><span class="arrow-link">Открыть раздел <b>↗</b></span></a>
+    <a href="service.html" class="feature-card" data-track="open_service" data-location="features"><span class="feature-icon">✧</span><span class="feature-label">02 / ПРАКТИКА</span><h3>Обслуживание</h3><p>Как следить за автомобилем, на что обращать внимание и что проверять.</p><span class="arrow-link">Открыть раздел <b>↗</b></span></a>
+    <a href="glossary.html" class="feature-card" data-track="open_glossary" data-location="features"><span class="feature-icon">☷</span><span class="feature-label">03 / ТЕРМИНЫ</span><h3>Автословарь</h3><p>Объясняем важные автомобильные понятия простыми словами.</p><span class="arrow-link">Открыть раздел <b>↗</b></span></a>
+    <a href="quiz.html" class="feature-card" data-track="open_quiz" data-location="features"><span class="feature-icon">◈</span><span class="feature-label">04 / ПРОВЕРКА</span><h3>Тест знаний</h3><p>10 вопросов, которые помогут закрепить изученный материал.</p><span class="arrow-link">Открыть раздел <b>↗</b></span></a>
+  </div>
+</section>
+<section class="section shell insight-grid"><div class="insight-photo" role="img" aria-label="Современный автомобиль"></div><div class="insight-copy"><div class="kicker">ПОЧЕМУ AUTOLAB</div><h2>Понимать машину<br>проще, чем кажется</h2><p>AutoLab помогает разобраться в базовых технических вопросах, чтобы уверенно разговаривать с мастерами, замечать тревожные признаки и лучше понимать свой автомобиль.</p><ul class="tick-list"><li>Короткие объяснения без перегруза</li><li>Интерактивные разделы и поиск</li><li>Материал доступен с телефона</li></ul><a class="text-link" href="about.html">Узнать о проекте <span>↗</span></a></div></section>
+<section class="section shell cta-band"><div><div class="kicker">ГОТОВА К ПРОВЕРКЕ?</div><h2>Что ты знаешь об автомобилях?</h2><p>Пройди короткий тест и узнай свой результат сразу.</p></div><a class="btn btn-primary" href="quiz.html" data-track="open_quiz" data-location="cta">Начать тест <span>→</span></a></section>
+</main>
+<footer class="site-footer"><div class="shell footer-columns">
+  <div><a class="logo" href="index.html">Auto<span>Lab</span><i></i></a><p>Понятно о сложном. Узнавай, как устроен автомобиль, и проверяй свои знания.</p></div>
+  <div><div class="footer-title">Разделы</div><div class="footer-links"><a href="structure.html">Устройство</a><a href="service.html">Обслуживание</a><a href="glossary.html">Автословарь</a><a href="quiz.html">Тест знаний</a></div></div>
+  <div><div class="footer-title">О проекте</div><p>Образовательный веб-проект, созданный для практических заданий по веб-аналитике.</p><a class="footer-cta" href="about.html">Подробнее о сайте →</a></div>
+</div><div class="shell copyright"><span>© 2026 AutoLab · Учебный проект</span><span>Сделано для любознательных водителей</span></div>
+<!-- СЧЁТЧИКИ С ВИДЖЕТОМ: здесь появятся блоки LiveInternet и других систем, если они предусмотрены методичками. -->
+</footer>
+</body></html>

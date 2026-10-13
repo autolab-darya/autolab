@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1118">
+  <meta name="description" content="Проверь свои знания автомобиля в интерактивном тесте из десяти вопросов.">
+  <title>Тест знаний — AutoLab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- МЕСТО ДЛЯ СЧЁТЧИКОВ: устанавливаются только после регистрации на сервисах.
+       Не подставляйте чужие ID. Код LiveInternet / Rambler / MyTracker добавим позднее. -->
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="quiz">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header"><div class="shell header-inner">
+  <a class="logo" href="index.html" aria-label="AutoLab — на главную">Auto<span>Lab</span><i></i></a>
+  <nav class="nav" id="site-nav" aria-label="Основное меню"><a href="index.html" class="nav-link " >Главная</a><a href="structure.html" class="nav-link " >Устройство</a><a href="service.html" class="nav-link " >Обслуживание</a><a href="glossary.html" class="nav-link " >Автословарь</a><a href="quiz.html" class="nav-link active" aria-current="page">Тест знаний</a><a href="about.html" class="nav-link " >О проекте</a></nav>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="page-banner shell"><div class="eyebrow">ПРОВЕРЬ СЕБЯ</div><h1>Тест <em>знаний</em></h1><p>10 вопросов об устройстве и обслуживании автомобиля. Результат появится сразу после прохождения.</p></section>
+<section class="shell section quiz-grid"><div class="quiz-shell"><div id="quiz-start" class="quiz-start"><div class="quiz-number">10<span> вопросов</span></div><h2>Готова проверить знания?</h2><p>На каждый вопрос один верный ответ. Можно проходить сколько угодно раз.</p><button type="button" class="btn btn-primary" id="start-quiz">Начать тест <span>→</span></button></div>
+<div id="quiz-play" hidden><div class="quiz-upper"><span id="quiz-step">Вопрос 1 из 10</span><span id="quiz-score">0 баллов</span></div><div class="progress-track quiz-progress"><span id="quiz-bar" style="width:10%"></span></div><h2 id="quiz-question"></h2><div id="quiz-options" class="quiz-options" role="radiogroup" aria-label="Варианты ответа"></div><button class="btn btn-primary quiz-next" type="button" id="next-question" disabled>Следующий вопрос <span>→</span></button></div>
+<div id="quiz-finish" class="quiz-finish" hidden><div class="kicker">РЕЗУЛЬТАТ ТЕСТА</div><div class="quiz-result"><span id="quiz-result-score">0</span><small> / 10</small></div><h2 id="quiz-result-title"></h2><p id="quiz-result-text"></p><div class="hero-actions"><button id="restart-quiz" class="btn btn-primary" type="button">Пройти ещё раз ↻</button><a class="btn btn-ghost" href="structure.html">Повторить основы</a></div></div></div>
+<aside class="quiz-side"><div class="quiz-wheel" role="img" aria-label="Автомобильный тормозной диск"></div><div class="did-you-know"><span>◈</span><div><h3>Знаешь ли ты?</h3><p>Тормозная система и шины сильно влияют на безопасность — поэтому им посвящены отдельные вопросы.</p></div></div><div class="quiz-side-footer">AutoLab / ИНТЕРАКТИВНЫЙ ТЕСТ</div></aside></section>
+</main>
+<footer class="site-footer"><div class="shell footer-columns">
+  <div><a class="logo" href="index.html">Auto<span>Lab</span><i></i></a><p>Понятно о сложном. Узнавай, как устроен автомобиль, и проверяй свои знания.</p></div>
+  <div><div class="footer-title">Разделы</div><div class="footer-links"><a href="structure.html">Устройство</a><a href="service.html">Обслуживание</a><a href="glossary.html">Автословарь</a><a href="quiz.html">Тест знаний</a></div></div>
+  <div><div class="footer-title">О проекте</div><p>Образовательный веб-проект, созданный для практических заданий по веб-аналитике.</p><a class="footer-cta" href="about.html">Подробнее о сайте →</a></div>
+</div><div class="shell copyright"><span>© 2026 AutoLab · Учебный проект</span><span>Сделано для любознательных водителей</span></div>
+<!-- СЧЁТЧИКИ С ВИДЖЕТОМ: здесь появятся блоки LiveInternet и других систем, если они предусмотрены методичками. -->
+</footer>
+</body></html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1118">
+  <meta name="description" content="Полезные советы по обслуживанию автомобиля и интерактивный чек-лист перед поездкой.">
+  <title>Обслуживание автомобиля — AutoLab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- МЕСТО ДЛЯ СЧЁТЧИКОВ: устанавливаются только после регистрации на сервисах.
+       Не подставляйте чужие ID. Код LiveInternet / Rambler / MyTracker добавим позднее. -->
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="service">
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header"><div class="shell header-inner">
+  <a class="logo" href="index.html" aria-label="AutoLab — на главную">Auto<span>Lab</span><i></i></a>
+  <nav class="nav" id="site-nav" aria-label="Основное меню"><a href="index.html" class="nav-link " >Главная</a><a href="structure.html" class="nav-link " >Устройство</a><a href="service.html" class="nav-link active" aria-current="page">Обслуживание</a><a href="glossary.html" class="nav-link " >Автословарь</a><a href="quiz.html" class="nav-link " >Тест знаний</a><a href="about.html" class="nav-link " >О проекте</a></nav>
+  <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<main id="main">
+<section class="page-banner shell"><div class="eyebrow">ПРАКТИЧЕСКИЕ СОВЕТЫ</div><h1>Обслуживание <em>автомобиля</em></h1><p>Короткие рекомендации по основным узлам. Интервалы всегда уточняй в руководстве своего автомобиля.</p></section>
+<section class="shell section service-layout"><div class="service-menu" role="tablist" aria-label="Темы обслуживания">
+<button class="service-tab selected" role="tab" aria-selected="true" aria-controls="service-panel" data-service="scheduled">✦ <span>Плановое ТО</span></button>
+<button class="service-tab" role="tab" aria-selected="false" aria-controls="service-panel" data-service="oil">◉ <span>Моторное масло</span></button>
+<button class="service-tab" role="tab" aria-selected="false" aria-controls="service-panel" data-service="tires">◎ <span>Шины</span></button>
+<button class="service-tab" role="tab" aria-selected="false" aria-controls="service-panel" data-service="brakes">◈ <span>Тормоза</span></button>
+<button class="service-tab" role="tab" aria-selected="false" aria-controls="service-panel" data-service="battery">ϟ <span>Аккумулятор</span></button>
+</div><article id="service-panel" role="tabpanel" tabindex="0" class="service-panel" aria-live="polite"><div class="service-photo"><img src="assets/oil-service.jpg" id="service-photo" alt="Обслуживание автомобиля"></div><div class="service-content"><div class="kicker">УХОД И НАДЁЖНОСТЬ</div><h2 id="service-title">Плановое техническое обслуживание</h2><p id="service-text">Регулярное техническое обслуживание помогает обнаруживать износ и снижать риск неожиданных поломок.</p><div class="advice-box"><strong id="service-advice-title">Общий принцип</strong><p id="service-advice">Сверяй интервал обслуживания с инструкцией производителя, пробегом, возрастом и условиями эксплуатации.</p></div></div></article></section>
+<section class="section shell"><div class="section-top"><div><div class="kicker">ЛИЧНЫЙ ЧЕК-ЛИСТ</div><h2>Что проверить перед поездкой</h2></div><p class="section-help">Отмечай пункты: прогресс сохранится в этом браузере.</p></div><div class="check-layout"><div class="checklist" id="trip-checklist">
+<label class="check-item"><input type="checkbox" data-check="tires"><span>Внешнее состояние шин и давление</span></label>
+<label class="check-item"><input type="checkbox" data-check="lights"><span>Фары, габариты и указатели поворота</span></label>
+<label class="check-item"><input type="checkbox" data-check="fluids"><span>Отсутствие явных подтёков жидкостей</span></label>
+<label class="check-item"><input type="checkbox" data-check="glass"><span>Чистота стёкол и зеркал</span></label>
+<label class="check-item"><input type="checkbox" data-check="dashboard"><span>Отсутствие предупреждений на приборной панели</span></label>
+</div><div class="check-progress"><span class="kicker">МОЙ ПРОГРЕСС</span><div class="big-number"><span id="checks-done">0</span><small> / 5</small></div><div class="progress-track"><span id="check-progress-bar" style="width:0%"></span></div><p id="check-message">Начни с первого пункта.</p><button type="button" id="check-reset" class="text-link">Сбросить отметки ↻</button></div></div></section>
+<div class="shell warning-inline">Важно: материалы носят ознакомительный характер и не заменяют техническую документацию или диагностику специалиста.</div>
+</main>
+<footer class="site-footer"><div class="shell footer-columns">
+  <div><a class="logo" href="index.html">Auto<span>Lab</span><i></i></a><p>Понятно о сложном. Узнавай, как устроен автомобиль, и проверяй свои знания.</p></div>
+  <div><div class="footer-title">Разделы</div><div class="footer-links"><a href="structure.html">Устройство</a><a href="service.html">Обслуживание</a><a href="glossary.html">Автословарь</a><a href="quiz.html">Тест знаний</a></div></div>
+  <div><div class="footer-title">О проекте</div><p>Образовательный веб-проект, созданный для практических заданий по веб-аналитике.</p><a class="footer-cta" href="about.html">Подробнее о сайте →</a></div>
+</div><div class="shell copyright"><span>© 2026 AutoLab · Учебный проект</span><span>Сделано для любознательных водителей</span></div>
+<!-- СЧЁТЧИКИ С ВИДЖЕТОМ: здесь появятся блоки LiveInternet и других систем, если они предусмотрены методичками. -->
+</footer>
+</body></html>

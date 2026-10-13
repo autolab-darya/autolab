@@ -1,19 +1,44 @@
-/* AutoLab — UI и единая точка событий для будущих счётчиков.
-   В этой версии внешние сервисы аналитики не подключены.
-   События можно увидеть в DevTools при адресе ?debug=1. */
+/* AutoLab — UI и единая точка событий.
+   quiz_started и quiz_completed отправляются в Rambler Top-100 / Sber Ads.
+   Все события доступны в DevTools при адресе ?debug=1. */
 (() => {
   'use strict';
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const page = document.body.dataset.page || 'unknown';
 
+  const TOP100_PROJECT_ID = 7752813;
+  const TOP100_QUIZ_EVENTS = new Set(['quiz_started', 'quiz_completed']);
+  const DEBUG_ANALYTICS = new URLSearchParams(location.search).has('debug');
+
+  function sendQuizEventToTop100(name, data) {
+    // Официальная очередь для reachGoal: сохраняет событие, если
+    // скрипт Top-100 ещё не успел загрузиться (он подключён async).
+    if (typeof window.top100d !== 'function') {
+      window.top100d = function () {
+        (window.top100d.a = window.top100d.a || []).push(arguments);
+      };
+    }
+    try {
+      if (name === 'quiz_completed') {
+        window.top100d(TOP100_PROJECT_ID, 'reachGoal', name, {
+          score: data.score,
+          total: data.total,
+          percent: data.percent
+        });
+      } else {
+        window.top100d(TOP100_PROJECT_ID, 'reachGoal', name);
+      }
+    } catch (error) {
+      if (DEBUG_ANALYTICS) console.warn('[AutoLab] Ошибка отправки события Top-100', error);
+    }
+  }
+
   function emit(name, data = {}) {
     const eventData = { event: name, page, ...data };
     document.dispatchEvent(new CustomEvent('autolab:analytics', { detail: eventData }));
-    if (new URLSearchParams(location.search).has('debug')) {
-      console.info('[AutoLab event]', eventData);
-    }
-    // Реальные системы подключаются отдельно, с личными ID владельца сайта.
+    if (TOP100_QUIZ_EVENTS.has(name)) sendQuizEventToTop100(name, data);
+    if (DEBUG_ANALYTICS) console.info('[AutoLab event]', eventData);
   }
   window.AutoLabAnalytics = Object.freeze({ emit });
 

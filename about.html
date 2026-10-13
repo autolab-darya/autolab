@@ -8,11 +8,39 @@
   <title>О проекте — AutoLab</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
-  <!-- МЕСТО ДЛЯ СЧЁТЧИКОВ: устанавливаются только после регистрации на сервисах.
-       Не подставляйте чужие ID. Код LiveInternet / Rambler / MyTracker добавим позднее. -->
+  <!-- Top100 (Kraken) Counter -->
+  <script>
+      (function (w, d, c) {
+      (w[c] = w[c] || []).push(function() {
+          var options = {
+              project: 7752813,
+          };
+          try {
+              w.top100Counter = new top100(options);
+          } catch(e) { }
+      });
+      var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src =
+      (d.location.protocol == "https:" ? "https:" : "http:") +
+      "//st.top100.ru/top100/top100.js";
+
+      if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+  } else { f(); }
+  })(window, document, "_top100q");
+  </script>
+  <!-- END Top100 (Kraken) Counter -->
+  <!-- LiveInternet: виджет и счётчик находятся внизу страницы. MyTracker добавим позже. -->
   <script src="js/main.js" defer></script>
 </head>
 <body data-page="about">
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid=7752813" alt="Топ-100" />
+</noscript>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
 <header class="site-header"><div class="shell header-inner">
   <a class="logo" href="index.html" aria-label="AutoLab — на главную">Auto<span>Lab</span><i></i></a>
@@ -31,6 +59,20 @@
   <div><div class="footer-title">Разделы</div><div class="footer-links"><a href="structure.html">Устройство</a><a href="service.html">Обслуживание</a><a href="glossary.html">Автословарь</a><a href="quiz.html">Тест знаний</a></div></div>
   <div><div class="footer-title">О проекте</div><p>Образовательный веб-проект, созданный для практических заданий по веб-аналитике.</p><a class="footer-cta" href="about.html">Подробнее о сайте →</a></div>
 </div><div class="shell copyright"><span>© 2026 AutoLab · Учебный проект</span><span>Сделано для любознательных водителей</span></div>
-<!-- СЧЁТЧИКИ С ВИДЖЕТОМ: здесь появятся блоки LiveInternet и других систем, если они предусмотрены методичками. -->
+<!-- Блок счётчика: визуальный виджет расположен внизу сайта -->
+<div class="shell" style="display:flex;align-items:center;justify-content:center;padding:12px 0 22px;">
+<!-- LiveInternet counter (виджет для лабораторной №3) -->
+<a href="https://www.liveinternet.ru/click" target="_blank" rel="noopener noreferrer"><img id="licntAC33" width="88" height="31" style="border:0"
+title="LiveInternet: показано число просмотров и посетителей за 24 часа"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt="Статистика посещений LiveInternet" /></a>
+<script>(function(d,s){d.getElementById("licntAC33").src=
+"https://counter.yadro.ru/hit?t52.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script>
+<!-- /LiveInternet counter -->
+</div>
 </footer>
 </body></html>

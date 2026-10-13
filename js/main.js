@@ -38,6 +38,18 @@
     const eventData = { event: name, page, ...data };
     document.dispatchEvent(new CustomEvent('autolab:analytics', { detail: eventData }));
     if (TOP100_QUIZ_EVENTS.has(name)) sendQuizEventToTop100(name, data);
+if (TOP100_QUIZ_EVENTS.has(name)) {
+  const mailGoal = name === 'quiz_started'
+    ? 'quizStarted'
+    : 'quizCompleted';
+
+  (window._tmr = window._tmr || []).push({
+    id: '3802254',
+    type: 'reachGoal',
+    goal: mailGoal
+  });
+}
+
     if (DEBUG_ANALYTICS) console.info('[AutoLab event]', eventData);
   }
   window.AutoLabAnalytics = Object.freeze({ emit });
